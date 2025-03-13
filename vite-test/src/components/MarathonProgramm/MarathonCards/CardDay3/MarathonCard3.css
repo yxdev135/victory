@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Vetrino';
+    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mulish';
+    src: url(../../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.programm__card-middle-text {
+    margin-top: 1.04vw;
+    font-size: 0.94vw;
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+}
+.programm__card-text {
+    margin-left: 1.04vw;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.83vw;
+}
+@media (max-width: 768px) {
+    .programm__card-text {
+        font-size: 16px;
+    }
+    .programm__card-middle-text {
+        font-size: 16px;
+    }
+    br{
+         display: none;
+    }
+}

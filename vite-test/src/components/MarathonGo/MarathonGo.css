@@ -1,0 +1,153 @@
+.go {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    align-items: center;
+    padding-bottom: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.go__header {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.go__header-left-nuke {
+    position: absolute;
+    width: 100vw;
+    height: 1500px;
+    background-image: url(../../assets/img/облака1.svg);
+    background-repeat: no-repeat;
+    background-position: -107.17vw 230px;
+    background-size: 201.04vw 148vh;
+}
+.go__header-bottom-nuke {
+    position: absolute;
+    width: 100vw;
+    height: 1500px;
+    background-image: url(../../assets/img/облака1.svg);
+    background-repeat: no-repeat;
+    background-position: -1000px 1100px;
+    background-size: 201.04vw 148vh;
+    z-index: 3;
+}
+.go__header-right-nuke {
+    position: absolute;
+    width: 100vw;
+    height: 1500px;
+    background-image: url(../../assets/img/облака1.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 80px;
+    background-size: 201.04vw 148vh;
+}
+.go__header-lovers {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../../assets/img/Lovers.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-position: 10.42vw 550px;
+    background-size: 9.79vw 16.15vw;
+}
+.go__header-sun {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../../assets/img/Sun.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-position: 17.71vw 520px;
+    background-size: 11.98vw 20.42vw;
+}
+.go__header-empress {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../../assets/img/Empress.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-position: 62.50vw 520px;
+    background-size: 11.98vw 20.42vw;
+}
+.go__header-emperor {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../../assets/img/Emperor.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-position: 70.79vw 590px;
+    background-size: 11.98vw 20.42vw;
+}
+.go__header-world {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../../assets/img/World.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-position: 79.13vw 500px;
+    background-size: 11.98vw 20.42vw;
+}
+
+@media (max-width:768px) {
+    .go__header-world {
+       display: none;
+    }
+    .go__header-lovers {
+        display: none;
+    }
+    .go__header-sun {
+        display: none;
+    }
+    .go__header-empress {
+        display: none;
+    }
+    .go__header-emperor {
+        display: none;
+    }
+    .go__header-left-nuke {
+        position: absolute;
+        width: 100vw;
+        height: 1500px;
+        background-image: url(../../assets/img/облака1.svg);
+        background-repeat: no-repeat;
+        background-position: -247.17vw 170px;
+        background-size: 300% 100%;
+    }
+    .go__header-bottom-nuke {
+        position: absolute;
+        width: 100vw;
+        height: 1500px;
+        background-image: url(../../assets/img/облака1.svg);
+        background-repeat: no-repeat;
+        background-position: -300px 700px;
+        background-size: 300% 100%;
+        z-index: 3;
+    }
+    .go__header-right-nuke {
+        position: absolute;
+        width: 100vw;
+        height: 1500px;
+        background-image: url(../../assets/img/облака1.svg);
+        background-repeat: no-repeat;
+        background-position: 100px 180px;
+        background-size: 300% 100%;
+    }
+    .go {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: #fff;
+        align-items: center;
+        padding-bottom: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+}

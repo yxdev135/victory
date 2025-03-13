@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Vetrino';
+    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mulish';
+    src: url(../../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.marathon__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-bottom: 100px;
+}
+
+.marathon__middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.marathon__middle-left {
+    align-items: center;
+    padding-right: 1%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.marathon__left-img {
+    margin-top: 3%;
+    width: 10.42vw;
+    height: 10.42vw;
+}
+
+.marathon__left-article {
+    align-self: flex-start;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.marathon__left-star-img {
+    width: 36px;
+    height: 36px;
+}
+
+.marathon__left-text {
+    margin-left: 20px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+}
+
+.marathon__middle-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.marathon__middle-right-phone {
+    display: none;
+}
+
+.marathon__middle-right-img-phone {
+    display: none;
+}
+
+.marathon__middle-right-img {
+    width: 36.72vw;
+    height: 35.21vw;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .marathon__header-top-text {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+    .marathon__middle-left {
+        align-items: center;
+        margin-left: 0px;
+    }
+    .marathon__middle-right-img {
+        width: 100%; 
+        height: auto;
+        margin-left: 0;
+    }
+    .marathon__left-article {
+        align-self: flex-start;
+        margin-left: 15px;
+    }
+    .marathon__header-top-img {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 140px;
+        width: 40px;
+        height: 40px;
+    }
+    .marathon__left-img {
+        width: 142px;
+        height: 142px;
+        margin-bottom: 20px;
+    }
+    .marathon__middle-right-img {
+        display: none;
+    }
+    .marathon__middle-right-phone {
+        display: block;
+    }
+    .marathon__middle-right-img-phone {
+        display: block;
+        margin-top: 40px;
+        width: 328px;
+        height: 315px;
+        margin-bottom: 40px;
+    }
+}

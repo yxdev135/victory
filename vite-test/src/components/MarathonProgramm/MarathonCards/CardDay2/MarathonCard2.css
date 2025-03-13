@@ -1,0 +1,17 @@
+.programm__card-text-start {
+    margin-left: 1.04vw;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.94vw;
+    margin-top: 10px;
+}
+.programm__card-text-phone {
+    display: none;
+}
+@media (max-width: 768px) {
+    .programm__card-text-start {
+        font-size: 16px;
+    }
+    .programm__card-text-phone{
+        display: block;
+    }
+}

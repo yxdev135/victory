@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Vetrino';
+    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mulish';
+    src: url(../../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.programm__card-article {
+    margin-left: 6%;
+    margin-top: 0.78vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.programm__card-star-img {
+    margin-top: 10px;
+    width: 1.35vw;
+    height: 1.35vw;
+}
+
+.programm__card-text {
+    margin-left: 20px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.94vw;
+}
+.programm__card {
+    position: relative;
+    overflow: hidden;
+    width: 24.01vw;
+    height: 33.39vw;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.programm__card-top-text {
+    font-size: 2.08vw;
+    font-family: 'Vetrino',sans-serif;
+    color: #BE9658;
+    text-align: center;
+    margin-top: 2.08vw;
+}
+.programm__bottom-img {
+    width: 328px;
+    height: 228px;
+    position: absolute;
+    top: 550px;
+    left: 80px;
+}
+@media (max-width: 768px) {
+    .programm__card {
+        width: 328px;
+        height: 456px;
+    }
+    .programm__card-text {
+        font-size: 18px;
+    }
+    .programm__card-top-text {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .programm__card-star-img {
+        margin-top: 8px;
+        width: 20px;
+        height: 20px;
+    }
+    .programm__card-article {
+        margin-top: 8px;
+ 
+    }
+}
