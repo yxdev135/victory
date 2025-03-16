@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Vetrino';
-    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Mulish';
-    src: url(../../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .results {
     position: relative;
     overflow: hidden;
@@ -52,61 +39,52 @@
 }
 .results__middle-block-text {
     margin: 0.52vw 1.56vw;
-    font-size:0.94vw ;
+    font-size: 0.94vw;
     font-family: 'Mulish', sans-serif;
 }
-.results__top-img {
-    position: absolute;
+.results__top-img,
+.results__bottom-nuke-first,
+.results__bottom-nuke-second{
     width: 1680px;
     height: 1415px;
+}
+.results__top-img {
     left: 52%;
     top: -78%;
-
 }
 .results__bottom-nuke-first {
-    position: absolute;
-    width: 1680px;
-    height: 1415px;
     top: 60%;
     right: 30%;
 }
 .results__bottom-nuke-second {
-    position: absolute;
-    width: 1680px;
-    height: 1415px;
     top: 75%;
     right: -5%;
 }
 .results__bottom-people {
-    position: absolute;
     width: 600px;
     height: 458px;
     top: 60%;
     left: 35%;
 }
 .results__bottom-lovers {
-    position: absolute;
     width: 169px;
     height: 277px;
     top: 60%;
     left: 15%;
 }
 .results__bottom-sun {
-    position: absolute;
     width: 200px;
     height: 305px;
     top: 60%;
     left: 20%;
 }
 .results__bottom-empress {
-    position: absolute;
     width: 190px;
     height: 300px;
     top: 60%;
     left: 65%;
 }
 .results__bottom-emperor {
-    position: absolute;
     width: 222px;
     height: 291px;
     top: 60%;
@@ -130,7 +108,8 @@
     }
     .results__middle-block {
         width: 328px;
-        height: 216px;
+        height: 226px;
+
     }
     .results__middle-block-img {
         margin: 1.56vw;
@@ -139,34 +118,29 @@
     }
     .results__middle-block-text {
         margin: 2px 20px;
-        font-size:16px ;
+        font-size: 16px;
     }
     .results__top-img {
-        /* transform: rotate(90deg); */
         width: 1680px;
         height: 1415px;
         left: -5%;
         top: -40%;
-    
     }
     .results__bottom-nuke-first {
-        position: absolute;
-        width: 1680px;
-        height: 1415px;
         top: 70%;
         right: 5%;
+        z-index: -1;
     }
-    .results__bottom-nuke-second {
-      display: none;
+    .results__bottom-nuke-second,
+    .results__bottom-lovers,
+    .results__bottom-emperor {
+        display: none;
     }
     .results__bottom-people {
         width: 260px;
         height: 190px;
         top: 87%;
         left: 20%;
-    }
-    .results__bottom-lovers {
-        display: none;
     }
     .results__bottom-sun {
         width: 100px;
@@ -179,9 +153,6 @@
         height: 132px;
         top: 88%;
         left: 75%;
-    }
-    .results__bottom-emperor {
-       display: none;
     }
     .results {
         padding-bottom: 300px;

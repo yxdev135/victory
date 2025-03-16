@@ -1,0 +1,28 @@
+
+.info,
+.info__row {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    font-family: 'Mulish', sans-serif;
+}
+.info__row {
+    flex-direction: row;
+}
+@media (max-width:900px) {
+    .info__row {
+        font-size: 14px;
+    }
+}
+@media (max-width:768px) {
+    .info{
+        font-size: 16px;
+    }
+}
+@media (max-width:800px) {
+    .info__row{
+        font-size: 12px;
+    }
+}

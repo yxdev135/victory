@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Footer.css';
 import NavList from "../../assets/ui/NavList/NavList";
+import NavSubInfo from "../../assets/ui/NavSubInfo/NavSubInfo";
 
 function Footer({ openModal }) {
     const [column, setColumn] = useState(false);
@@ -45,10 +46,7 @@ function Footer({ openModal }) {
                     </div>
                 </ul>
                 <ul className="footer__bottom-list">
-                    <li className="footer__bottom-list-text">Юридическая информация</li>
-                    <li className="footer__bottom-list-text">Политика конфедициальности</li>
-                    <li className="footer__bottom-list-text">«СИЛА ТАРО»</li>
-                    <li className="footer__bottom-list-text">© Школа Анастасии MON, 2025</li>
+                    <NavSubInfo column={column}/>
                 </ul>
             </div>
         </footer>

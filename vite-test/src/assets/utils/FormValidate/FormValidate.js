@@ -23,3 +23,8 @@ export const handlePhone = (phone) => {
 export const validateAgreement = (isChecked) => {
     return isChecked;
 };
+
+export const validatePhone = (phone) => {
+  const phoneValidate = /^\+7\s\d{3}\s\d{3}-\d{2}-\d{2}$/;
+  return phoneValidate.test(phone);
+};

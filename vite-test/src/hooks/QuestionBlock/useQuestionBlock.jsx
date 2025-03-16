@@ -1,5 +1,5 @@
 import { useState } from "react";
-import questions from '../../assets/utils/Questions/Questions';
+import questions from '../../../consts/Questions/Questions';
 
 const useQuestionBlock = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

@@ -1,6 +1,29 @@
+@font-face {
+    font-family: 'Vetrino';
+    src: url(../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mulish';
+    src: url(../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url(../../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     user-select: none;
+}
+.absolute {
+    position: absolute;
 }

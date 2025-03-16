@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
-function FeedbackData({ setFeedbackData }) {
+const useFetchFeedbackData = (setFeedbackData) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -13,8 +13,12 @@ function FeedbackData({ setFeedbackData }) {
                 console.error("Ошибка при загрузке данных:", error);
             }
         };
+
         fetchData();
     }, [setFeedbackData]);
+};
+function FeedbackData({ setFeedbackData }) {
+    useFetchFeedbackData(setFeedbackData);
 
     return null;
 }

@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Vetrino';
-    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Mulish';
-    src: url(../../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .marathon__header {
     display: flex;
     flex-direction: column;
@@ -22,16 +9,19 @@
 
 .marathon__middle {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+}
+
+.marathon__middle-left,
+.marathon__middle-right {
+    display: flex;
+    flex-direction: column;
 }
 
 .marathon__middle-left {
     align-items: center;
     padding-right: 1%;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
 .marathon__left-img {
@@ -59,16 +49,11 @@
 }
 
 .marathon__middle-right {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.marathon__middle-right-phone {
-    display: none;
-}
-
+.marathon__middle-right-phone,
 .marathon__middle-right-img-phone {
     display: none;
 }
@@ -84,42 +69,45 @@
         font-size: 30px;
         padding: 0 20px;
     }
+
     .marathon__middle-left {
-        align-items: center;
-        margin-left: 0px;
+        margin-left: 0;
     }
+
     .marathon__middle-right-img {
         width: 100%; 
         height: auto;
         margin-left: 0;
     }
+
     .marathon__left-article {
-        align-self: flex-start;
         margin-left: 15px;
     }
+
     .marathon__header-top-img {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 140px;
+        margin: 140px 20px 0;
         width: 40px;
         height: 40px;
     }
+
     .marathon__left-img {
         width: 142px;
         height: 142px;
         margin-bottom: 20px;
     }
+
     .marathon__middle-right-img {
         display: none;
     }
+
     .marathon__middle-right-phone {
         display: block;
     }
+
     .marathon__middle-right-img-phone {
         display: block;
-        margin-top: 40px;
+        margin: 40px 0;
         width: 328px;
         height: 315px;
-        margin-bottom: 40px;
     }
 }

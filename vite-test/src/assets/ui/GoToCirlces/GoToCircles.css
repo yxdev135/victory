@@ -10,77 +10,67 @@
     position: absolute;
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
-.circle__hover-top-left {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-}
-.circle__hover-top-left-dot {
-    position: absolute;
-    top: 10px;
-    left: 40px;
-    width: 5px;
-    height: 5px;
+.circle__hover-top-left-dot,
+.circle__hover-top-left-second,
+.circle__hover-top-right .circle__hover-top-left-second,
+.header__bottom-second-circle{
     background-color: #BE9658;
     border-radius: 100%;
 }
-.circle__hover-top-left-star {
-    width: 100%;
-    height: 100%;
-    background-image: url(../../img/Star.svg);
-    background-repeat: no-repeat;
-    background-size: 36px 36px;
-    background-position: 3px -0px;
-}
-.circle__hover-top-left-second {
-    position: absolute;
-    top: 37px;
-    left: 7px;
-    width: 9px;
-    height: 9px;
-    background-color: #BE9658;
-    border-radius: 100%;
-}
-.circle__hover-top-right {
-    position: absolute;
-    width: 250px;
-    height: 100px;
-}
-.circle__hover-top-right .circle__hover-top-left-second {
-    position: absolute;
-    top: 25px;
-    left: 200px;
-    width: 9px;
-    height: 9px;
-    background-color: #BE9658;
-    border-radius: 100%;
-}
-.circle__hover-top-right .circle__hover-top-left-star{
-    width: 100%;
-    height: 100%;
-    background-image: url(../../img/Star.svg);
-    background-repeat: no-repeat;
-    background-size: 36px 36px;
-    background-position: 210px 25px;
-
-}
-.circle__hover-bottom {
-    width: 100px;
-    height: 240px;
-    position: absolute;
-}
+.circle__hover-top-right .circle__hover-top-left-star,
+.circle__hover-top-left-star,
 .circle__hover-bottom .circle__hover-top-left-star{
     width: 100%;
     height: 100%;
     background-image: url(../../img/Star.svg);
     background-repeat: no-repeat;
     background-size: 36px 36px;
+}
+.circle__hover-top-left {
+    width: 50px;
+    height: 50px;
+}
+.circle__hover-top-left-dot {
+    top: 10px;
+    left: 40px;
+    width: 5px;
+    height: 5px;
+}
+.circle__hover-top-left-star {
+    background-position: 3px -0px;
+}
+.circle__hover-top-left-second,
+.circle__hover-top-right .circle__hover-top-left-second {
+    width: 9px;
+    height: 9px;
+}
+.circle__hover-top-left-second {
+    top: 37px;
+    left: 7px;
+}
+.circle__hover-top-right {
+    width: 250px;
+    height: 100px;
+}
+.circle__hover-top-right .circle__hover-top-left-second {
+    top: 25px;
+    left: 200px;
+}
+.circle__hover-top-right .circle__hover-top-left-star{
+    background-position: 210px 25px;
+
+}
+.circle__hover-bottom {
+    width: 100px;
+    height: 240px;
+}
+.circle__hover-bottom .circle__hover-top-left-star{
     background-position: 15px 200px;
 }
 .header__bottom-circle {
     transition: all 0.2s ease;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,18 +85,19 @@
 
 .header__bottom-second-circle {
     z-index: -1;
-    position: absolute; 
     top: 60px; 
     left: 80px; 
     width: 184px;
     height: 184px;
-    background-color: #BE9658;
-    border-radius: 100%;
+    cursor: pointer;
+}
+.header__bottom-circle-text,
+.header__bottom-info-text{
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
 }
 
 .header__bottom-circle-text {
-    text-align: center;
-    font-family: 'Mulish', sans-serif;
     font-weight: bold;
     line-height: 110%;
     font-size: 24px;
@@ -119,7 +110,6 @@
 }
 
 .header__bottom-arrow {
-    position: absolute;
     bottom: 150px;
     left: 240px;
     width: 150px;
@@ -127,7 +117,6 @@
 }
 .header__bottom-arrow-column {
     transform: scale(-1, 1) rotate(80deg);
-    position: absolute;
     bottom: -30px;
     left: -180px;
     width: 190px;
@@ -135,38 +124,33 @@
 }
 
 
+.header__bottom-info,
+.header__bottom-info-column {
+    background-color: #fff;
+    border: 2px solid #BE9658;
+    border-radius: 20px;
+    display: flex;
+}
 .header__bottom-info {
-    position: absolute;
     left: 330px;
     top: 90px;
     width: 329px;
     height: 86px;
-    background-color: #fff;
-    border: 2px solid #BE9658;
-    border-radius: 20px;
-    display: flex;
     z-index: 3;
 }
 
 .header__bottom-info-column {
-    position: absolute;
     left: -50px;
     top: 250px;
     width: 394px;
     height: 91px;
-    background-color: #fff;
-    border: 2px solid #BE9658;
-    border-radius: 20px;
-    display: flex;
 }
 
 .header__bottom-info-text {
     width: 100%;
     height: 100%;
-    text-align: center;
     justify-content: center;
     margin: 15px;
-    font-family: 'Mulish', sans-serif;
     font-size: 18px;
 }
 @media (max-width:768px) {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './HeaderTopBar.css';
 import NavList from "../../../assets/ui/NavList/NavList";
+import NavBurger from "../../../assets/ui/NavBurger/NavBurger";
 
 function HeaderTopBar({ openModal, modalOpen}) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,15 +19,11 @@ function HeaderTopBar({ openModal, modalOpen}) {
         if (!modalOpen) {
             setButtonPressed(false)
         }
-    })
+    }, [modalOpen]);
 
     return (
         <nav className="header">
-            <div className="header__burger" onClick={toggleMenu}>
-                <div className={`header__burger-line ${menuOpen ? "header__burger-line--active" : ""}`}></div>
-                <div className={`header__burger-line ${menuOpen ? "header__burger-line--active" : ""}`}></div>
-                <div className={`header__burger-line ${menuOpen ? "header__burger-line--active" : ""}`}></div>
-            </div>
+            <NavBurger menuOpen={menuOpen} toggleMenu={toggleMenu} />
             <NavList openModal={openModal} menuOpen={menuOpen}/>
             <button 
                 className="header__button" 

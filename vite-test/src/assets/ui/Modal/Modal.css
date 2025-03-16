@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Vetrino';
-    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Mulish';
-    src: url(../../../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .modal__overlay {
     position: fixed;
     top: 0;
@@ -28,14 +15,18 @@
     background: #EBE9E3;
     border-radius: 40px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 1140px;
+    width: 59.38vw;
     height: 509px;
 }
+
 .modal__header {
     display: flex;
     flex-direction: row;
 }
-.modal__header-left {
+
+.modal__header-left,
+.modal__header-left-background,
+.modal__header-left-cards {
     position: relative;
     overflow: hidden;
     width: 570px;
@@ -43,12 +34,12 @@
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
-.modal__header-left-background{
+
+.modal__header-left-background {
     width: 570px;
     height: 509px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
 }
+
 .modal__header-left-cards {
     position: absolute;
     right: -50px;
@@ -56,7 +47,9 @@
     width: 674px;
     height: 316px;
 }
-.modal__bottom-info {
+
+.modal__bottom-info,
+.modal__bottom-info-phone {
     position: absolute;
     left: 15%;
     top: 75%;
@@ -68,67 +61,159 @@
     display: flex;
 }
 
-.modal__bottom-info-text {
+.modal__bottom-info-text,
+.modal__bottom-info-text-phone {
     width: 100%;
     height: 100%;
     text-align: center;
     justify-content: center;
-    text-wrap: nowrap;
     margin: 15px;
     font-family: 'Mulish', sans-serif;
+}
+
+.modal__bottom-info-text {
     font-size: 18px;
 }
-.modal__bottom-text-wrap-phone{
+
+.modal__bottom-info-text-phone {
+    font-size: 16px;
+}
+
+.modal__bottom-text-wrap-phone,
+.modal__header-left-phone,
+.modal__header-left-background-phone,
+.modal__header-left-cards-phone,
+.modal__bottom-info-phone {
     display: none;
 }
-.modal__bottom-phone {
-    display: none;
-    display: flex;
-    flex-direction: column;
+@media (max-width: 1500px) {
+    .modal__header-left,
+    .modal__header-left-background,
+    .modal__header-left-cards {
+        position: relative;
+        overflow: hidden;
+        width: 500px;
+        height: 509px;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
+    
+    .modal__header-left-background {
+        width: 500px;
+        height: 509px;
+    }
+    
+    .modal__header-left-cards {
+        position: absolute;
+        left: -90px;
+        top: 80px;
+        width: 600px;
+        height: 316px;
+    }
+    
+    .modal__bottom-info,
+    .modal__bottom-info-phone {
+        position: absolute;
+        left: 15%;
+        top: 75%;
+        width: 21.63vw;
+        height: 89px;
+        background-color: #fff;
+        border: 2px solid #BE9658;
+        border-radius: 20px;
+        display: flex;
+    }
+    
+    .modal__bottom-info-text,
+    .modal__bottom-info-text-phone {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 15px;
+        font-family: 'Mulish', sans-serif;
+    }
+    
+    .modal__bottom-info-text {
+        font-size: 14px;
+    }
+    
+    .modal__bottom-info-text-phone {
+        font-size: 16px;
+    }
 }
-.modal__header-left-phone {
-    display: none;
+@media (max-width: 1300px) {
+    .modal__header-left,
+    .modal__header-left-background,
+    .modal__header-left-cards {
+        position: relative;
+        overflow: hidden;
+        width: 500px;
+        height: 509px;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
+    
+    .modal__header-left-background {
+        width: 500px;
+        height: 509px;
+    }
+    
+    .modal__header-left-cards {
+        position: absolute;
+        left: -50px;
+        top: 80px;
+        width: 400px;
+        height: 256px;
+    }
+    
+    .modal__bottom-info,
+    .modal__bottom-info-phone {
+        position: absolute;
+        left: 15%;
+        top: 75%;
+        width: 17.63vw;
+        height: 89px;
+        background-color: #fff;
+        border: 2px solid #BE9658;
+        border-radius: 20px;
+        display: flex;
+    }
+    .modal__bottom-info-text {
+        font-size: 12px;
+    }
 }
-.modal__header-left-background-phone {
-    display: none;
+@media (max-width: 900px) {
+    .modal__header-left-cards {
+        position: absolute;
+        left: -0px;
+        top: 160px;
+        width: 200px;
+        height: 176px;
+    }
+    .modal__bottom-info-text {
+        font-size: 10px;
+    }
 }
-.modal__header-left-cards-phone {
-    display: none;
-}
-.modal__bottom-info-phone{
-    display: none;
-}
-.modal__bottom-info-text-phone{
-    display: none;
-}
-@media (max-width: 768px) {
+@media (max-width: 768px),(max-width: 1000px) {
     .modal__overlay-content {
         width: 328px;
         height: 685px;
     }
+
     .modal__bottom-phone {
-        display: block;
         display: flex;
         flex-direction: row;
     }
-    .modal__header-left{
+
+    .modal__header-left,
+    .modal__header-left-background,
+    .modal__header-left-cards,
+    .modal__bottom-info,
+    .modal__bottom-info-text {
         display: none;
     }
-    .modal__header-left-background{
-        display: none;
-    }
-    .modal__header-left-cards{
-        display: none;
-    }
-    .modal__bottom-info{
-        display: none;
-    }
-    .modal__bottom-info-text{
-        display: none;
-    }
-    .modal__bottom-phone {
-        display: block;
-    }
+
     .modal__header-left-phone {
         margin-top: 20px;
         display: block;
@@ -139,13 +224,15 @@
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
     }
-    .modal__header-left-background-phone{
+
+    .modal__header-left-background-phone {
         display: block;
         width: 328px;
         height: 366px;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
     }
+
     .modal__header-left-cards-phone {
         display: block;
         position: absolute;
@@ -154,6 +241,7 @@
         width: 430px;
         height: 201px;
     }
+
     .modal__bottom-info-phone {
         display: block;
         position: absolute;
@@ -166,7 +254,7 @@
         border-radius: 20px;
         display: flex;
     }
-    
+
     .modal__bottom-info-text-phone {
         display: block;
         width: 300px;
@@ -175,11 +263,10 @@
         justify-content: center;
         margin: 10px;
         font-family: 'Mulish', sans-serif;
-        font-size: 16px;
     }
+
     .modal__overlay {
         top: -80px;
-        /* bottom: 0px; */
         background-color: rgba(0, 0, 0, 0.6);
     }
 }

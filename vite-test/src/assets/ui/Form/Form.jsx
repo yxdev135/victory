@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { validateName, handlePhone, validateAgreement } from '../../utils/FormValidate/FormValidate';
+import { validateName, handlePhone, validateAgreement, validatePhone } from '../../utils/FormValidate/FormValidate';
 import './Form.css'; 
 
 const Form = ({ onClose, showCloseButton = true, showText = false, handleRestartQuestion }) => {
@@ -7,11 +7,17 @@ const Form = ({ onClose, showCloseButton = true, showText = false, handleRestart
     const [phone, setPhone] = useState('');
     const [isChecked, setIsChecked] = useState(false);
     const [buttonPressed, setButtonPressed] = useState(false);
+    const [errors, setErrors] = useState({ name: '', phone: '' });
 
     const handleSubmit = () => {
+        let newErrors = { name: '', phone: '' };
+
         if (!validateName(name)) {
-            alert('Поле Имя должно содержать только буквы.');
-            return;
+            newErrors.name = 'Поле Имя должно содержать только буквы.';
+        }
+
+        if (!validatePhone(phone)) {
+            newErrors.phone = 'Номер телефона должен быть в формате +7 999 999-99-99.';
         }
 
         if (!validateAgreement(isChecked)) {
@@ -19,10 +25,14 @@ const Form = ({ onClose, showCloseButton = true, showText = false, handleRestart
             return;
         }
 
+        if (newErrors.name || newErrors.phone) {
+            setErrors(newErrors);
+            return;
+        }
+
         console.log('Имя:', name);
         console.log('Номер:', phone);
         if (showText) {
-            console.log(888);
             handleRestartQuestion();
         }
         if (showCloseButton) {
@@ -54,21 +64,30 @@ const Form = ({ onClose, showCloseButton = true, showText = false, handleRestart
             <article className='modal__middle'>
                 <p className='modal__middle-text'>Ваше имя</p>
                 <input 
-                    className='modal__middle-input'
+                    className={`modal__middle-input${errors.name ? '-error' : ''}`}
                     placeholder='Имя'
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => {
+                        setName(e.target.value);
+                        setErrors({ ...errors, name: '' });
+                    }}
                 />
+                {errors.name && <p className='error__message'>{errors.name}</p>}
             </article>
 
             <article className='modal__middle'>
                 <p className='modal__middle-text'>Ваш номер</p>
                 <input 
-                    className='modal__middle-input'
+                    className={`modal__middle-input${errors.name ? '-error' : ''}`}
                     placeholder='+7 999 999-99-99'
                     value={phone}
-                    onChange={(e) => setPhone(handlePhone(e.target.value))}
+                    onChange={(e) => {
+                    setPhone(handlePhone(e.target.value));
+                        setErrors({ ...errors, phone: '' });
+                    }}
+                    style={{ borderColor: errors.phone ? 'red' : 'none' }}
                 />
+                {errors.phone && <p className='error__message'>{errors.phone}</p>}
             </article>
             <article className='modal__bottom'>
                 <input 
@@ -77,8 +96,10 @@ const Form = ({ onClose, showCloseButton = true, showText = false, handleRestart
                     checked={isChecked}
                     onChange={() => setIsChecked(!isChecked)} 
                 />
-                <p className='modal__bottom-text'>Я согласен с <u>политикой<br className='modal__bottom-text-wrap-phone'/> конфиденциальности</u> <br className='modal__bottom-text-wrap-pc'/>
-                и даю<br className='modal__bottom-text-wrap-phone'/> согласие на обработку персональных данных</p>
+                <p className='modal__bottom-text'>Я согласен с <u>политикой конфиденциальности</u> 
+                    
+                и даю
+                согласие на обработку персональных данных</p>
             </article>
             <button 
                 className="modal__bottom-button" 

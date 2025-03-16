@@ -13,7 +13,7 @@ import Title from "../../assets/ui/Title/Title";
 function MarathonResults() {
     return(
         <div className='results'>
-            <img src={PinkNuke} className='results__top-img'></img>
+            <img src={PinkNuke} className='results__top-img absolute'></img>
             <Title text="РЕЗУЛЬТАТЫ ЗА ТРИ ДНЯ МАРАФОНА ВЫ УЗНАЕТЕ:"/>
             <div className='results__middle'>
                 <article>
@@ -65,13 +65,13 @@ function MarathonResults() {
                             и счастью.</p>
                     </section>
                 </article>
-                <img src={PinkNuke} className='results__bottom-nuke-first'/>
-                <img src={PinkNuke} className='results__bottom-nuke-second'/>
-                <img src={People} className='results__bottom-people'/>
-                <img src={Lovers} className='results__bottom-lovers'/>
-                <img src={Sun} className='results__bottom-sun'/>
-                <img src={Empress} className='results__bottom-empress'/>
-                <img src={Emperor} className='results__bottom-emperor'/>
+                <img src={PinkNuke} className='results__bottom-nuke-first absolute'/>
+                <img src={PinkNuke} className='results__bottom-nuke-second absolute'/>
+                <img src={People} className='results__bottom-people absolute'/>
+                <img src={Lovers} className='results__bottom-lovers absolute'/>
+                <img src={Sun} className='results__bottom-sun absolute'/>
+                <img src={Empress} className='results__bottom-empress absolute'/>
+                <img src={Emperor} className='results__bottom-emperor absolute'/>
             </div>
         </div>
     )

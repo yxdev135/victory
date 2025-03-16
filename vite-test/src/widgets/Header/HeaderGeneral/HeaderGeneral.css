@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Vetrino';
-    src: url(../../../assets/fonts/Vetrino/ofont.ru_Vetrino.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Mulish';
-    src: url(../../../assets/fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 header {
     overflow: hidden;
     position: relative;
@@ -26,39 +13,35 @@ header {
     flex-direction: column;
 }
 
-.header__top {
-    margin-top: 6%;
+.header__top, .header__middle {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2.72vw;
 }
 
-.header__top-text {
+.header__top {
+    margin-top: 6%;
+}
+
+.header__top-text, .header__middle-text, .header__container-subtext {
     line-height: 120%;
-    font-size: 2.60vw;
     font-family: 'Vetrino', sans-serif;
     color: #743335;
 }
-
-.header__top-img {
-    width: 2.50vw;
-    height: 2.50vw;
+.header__container-subtext {
+    font-size: 1.56vw;
 }
-
-.header__middle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2.72vw;
+.header__container-img {
+    display: none;
+}
+.header__top-text {
+    font-size: 2.60vw;
 }
 
 .header__middle-text {
     font-weight: normal;
-    line-height: 120%;
     font-size: 5.21vw;
-    font-family: 'Vetrino', sans-serif;
-    color: #743335;
     z-index: 3;
 }
 
@@ -67,92 +50,74 @@ header {
     width: 5.21vw;
     height: 5.21vw;
 }
-.header__container{
+
+.header__container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.header__container-subtext {
-    font-weight: normal;
-    font-size: 1.56vw;
-    font-family: 'Vetrino', sans-serif;
-    color: #743335;
-}
-.header__container-img {
-    display: none;
-}
 
 .header__left-bottom-images {
-    /* background-color: black; */
     position: absolute;
     width: 100.19vw;
     height: 47.4vw;
     bottom: 0vw;
     left: 15.63vw;
 }
-.header__left-bottom-relative{
+
+.header__left-bottom-relative {
     width: 100%;
     height: 100%;
     position: relative;
-
 }
-.header__left-bottom-smoke {
+
+.header__left-bottom-smoke, .header__left-bottom-pair, .header__left-bottom-lovers, .header__left-bottom-emperor, .header__left-bottom-empress, .header__left-bottom-star {
     width: 100%;
     height: 100%;
-    background-image: url(../../../assets/img/smoke.svg);
     background-repeat: no-repeat;
-    /* z-index: 3; */
+}
+
+.header__left-bottom-smoke {
+    background-image: url(../../../assets/img/smoke.svg);
     background-size: 120% 120%;
     background-position: -6.25vw 0px;
 }
 
 .header__left-bottom-pair {
-    width: 100%;
-    height: 100%;
     background-image: url(../../../assets/img/Pair.svg);
-    background-repeat: no-repeat;
     background-size: 70% 70%;
     background-position: 27.86vw 14.32vw;
 }
 
 .header__left-bottom-lovers {
-    width: 100%;
-    height: 100%;
     background-image: url(../../../assets/img/Lovers1.svg);
     background-size: 50% 50%;
-    background-repeat: no-repeat;
     background-position: 14.58vw 22.92vw;
-
-
 }
 
 .header__left-bottom-emperor {
-    width: 100%;
-    height: 100%;
     background-image: url(../../../assets/img/Emperor1.svg);
     background-size: 30% 30%;
-    background-repeat: no-repeat;
     background-position: 52.08vw 3.65vw;
 }
 
 .header__left-bottom-empress {
-    width: 100%;
-    height: 100%;
     background-image: url(../../../assets/img/Empress1.svg);
-    background-repeat: no-repeat;
     background-size: 30% 30%;
     background-position: 58.85vw 7.29vw;
 }
+
 .header__left-bottom-star {
-    width: 100%;
-    height: 100%;
     background-image: url(../../../assets/img/Star.svg);
-    background-repeat: no-repeat;
     background-size: 3% 3%;
     background-position: 58.85vw 6.77vw;
 }
 
 @media (max-width: 768px) {
+    header {
+        height: 870px;
+    }
+
     .header__top-text {
         font-size: 30px;
     }
@@ -171,36 +136,6 @@ header {
         height: 50px;
     }
 
-    .header__bottom-info {
-        left: 20px;
-        top: 60px;
-        width: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 800px;
-    }
-    .header__top-text {
-        font-size: 24px;
-    }
-
-    .header__top-img {
-        width: 24px;
-        height: 24px;
-    }
-
-    .header__middle-text {
-        font-size: 36px;
-        text-wrap: wrap;
-        width: 344px;
-    }
-
-    .header__middle-img {
-        width: 40px;
-        height: 40px;
-    }
     .header__left-bottom-images {
         position: absolute;
         width: 105.10vw;
@@ -208,57 +143,51 @@ header {
         bottom: 0vw;
         left: 0vw;
     }
-    .header__left-bottom-relative{
-        width: 100%;
-        height: 100%;
-        position: relative;
-    
-    }
+
     .header__left-bottom-smoke {
-        background-repeat: no-repeat;
         background-size: 220% 220%;
         background-position: -56.46vw -54.09vw;
     }
-    
+
     .header__left-bottom-pair {
-        background-repeat: no-repeat;
         background-size: 70% 70%;
         background-position: 13vw 56.06vw;
     }
-    
+
     .header__left-bottom-lovers {
         background-size: 40% 40%;
-        background-repeat: no-repeat;
         background-position: -2.95vw 70.18vw;
-    
     }
-    
+
     .header__left-bottom-emperor {
         background-size: 30% 30%;
-        background-repeat: no-repeat;
         background-position: 55.44vw 57.67vw;
     }
-    
+
     .header__left-bottom-empress {
         background-size: 25% 25%;
         background-position: 73.81vw 65.57vw;
-
     }
+
     .header__left-bottom-star {
         display: none;
     }
+
     .header__container-img {
         display: block;
         width: 55px;
         height: 55px;
     }
-    .header__middle-img{
+
+    .header__middle-img {
         display: none;
     }
+
     .header__bottom {
         margin-top: 20px;
     }
-    .header__container-subtext{
+
+    .header__container-subtext {
         font-weight: 100;
         font-size: 16px;
     }

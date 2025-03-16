@@ -12,5 +12,6 @@
 - [x] fix margin/padding in answer slide
 - [x] do hovers
 - [x] fix mobile version for form
-- [ ] smoke close slide in MarathonGoSlide
+- [x] smoke close slide in MarathonGoSlide
 - [x] min-width for NavLinks
+- [ ] modal dont shrink when vw down

@@ -1,0 +1,43 @@
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger__line {
+    border-radius: 10px;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.burger__line--active:nth-child(1) {
+    border-radius: 50px;
+    transform: translateY(10px) rotate(50deg);
+}
+
+.burger__line--active:nth-child(2) {
+    opacity: 0;
+}
+
+.burger__line--active:nth-child(3) {
+    border-radius: 50px;
+    transform: translateY(-11px) rotate(-52deg);
+}
+
+@media (max-width: 768px) {
+
+    .burger {
+        background-color: #BE9658;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        display: flex; 
+        margin-left: 50px;
+        margin-right: 6.80vw;
+    }
+}

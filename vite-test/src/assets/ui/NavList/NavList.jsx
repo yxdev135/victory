@@ -1,6 +1,7 @@
 import React from "react";
-import NavLinks from "../../utils/NavLinks/NavLinks";
+import NavLinks from "../../../../consts/NavLinks/NavLinks";
 import './NavList.css'
+import NavSubInfo from "../NavSubInfo/NavSubInfo";
 
 function NavList({menuOpen,openModal,column }) {
     return(
@@ -11,14 +12,7 @@ function NavList({menuOpen,openModal,column }) {
                         {item.text}
                     </li>
                 ))}
-                {menuOpen && (
-                    <aside className="burger__info">
-                        <p>Юридическая информация</p>
-                        <p>Политика конфиденциальности</p>
-                        <p>«СИЛА ТАРО»</p>
-                        <p>© Школа Анастасии MON, 2025</p>
-                    </aside>
-                )}
+                {menuOpen && <NavSubInfo/>}
             </ul>
         </>
     )

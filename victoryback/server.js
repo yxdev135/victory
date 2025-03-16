@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-    origin: 'http://192.168.0.101:3001'
+    origin: 'http://192.168.63.221:3001'
   }));
 
 const db = new sqlite3.Database('./feedback.db', (err) => {
